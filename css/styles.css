@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-areas: 
+    "nav-bar"
+    ;
+}
+
+.nav-bar-container {
+    grid-area: nav-bar;
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    width: 50%;
+}
+
+#nav-bar-section-links {
+    width: 50%;
+}
+
+#nav-bar-section-links ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+#nav-bar-section-links li {
+    display: inline;
+}
