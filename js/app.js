@@ -13,15 +13,48 @@ for (let section1menuitem of section1menuitems){
     });
 }
 
-/* Document fragment for section 1's image*/
+/* Function to check if component is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
-const section1imagefragment = document.createDocumentFragment();
+const sect1box = document.querySelector('.section1-container');
+const rect = isInViewport(sect1box);
+console.log(rect);
+*/
 
-const section1whatdowesell = document.createElement('img');
-section1whatdowesell.setAttribute('src','images/section1-image-what-do-we-sell.PNG');
 
-section1imagefragment.appendChild(section1whatdowesell);
+const navLinksFragment = document.createDocumentFragment();
 
-const section1imagenode = document.querySelector('#section1-information-image');
+/* Create div container for navigation menu */
+const navLinks = document.createElement('div');
+navLinks.setAttribute('id','nav-bar-section-links');
 
-section1imagenode.appendChild(section1imagefragment);
+/* Search for section names */
+const sectionNames = document.querySelectorAll('.sections');
+console.log(sectionNames[0].id);
+
+/* Create unordered list */
+const navLinksUL = document.createElement('ul');
+
+/* Create dynamic list items and links */
+for (let sectionName of sectionNames){
+    let navLinksLI = document.createElement('li');
+    let navLinksA = document.createElement('a');
+    navLinksA.textContent = sectionName.id;
+    navLinksLI.appendChild(navLinksA);
+    navLinksUL.appendChild(navLinksLI);
+}
+
+navLinks.appendChild(navLinksUL);
+navLinksFragment.appendChild(navLinks);
+
+const abc = document.querySelector('.nav-bar-container');
+abc.appendChild(navLinksFragment);
+
