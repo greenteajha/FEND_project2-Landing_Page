@@ -8,8 +8,19 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #f2ae2e;
+    background-color: #730C02;
+    height: 70px;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .body-container {
+    padding-top: 70px;
+  }
 
 #logo {
     width: 10%;
@@ -38,7 +49,7 @@ body {
 
 #nav-bar-section-links a {
     text-decoration: none;
-    color: #730c02;
+    color: #f2ae2e;
     font-size: 20px;
 }
 
@@ -46,8 +57,7 @@ body {
     display: grid;
     grid-template-columns: 100vw;
     grid-auto-rows: minmax(70px, auto);
-    grid-template-areas: "banner" "section1" "section2" "section3" "section4" "footer";
-    row-gap: 10px;
+    grid-template-areas: "banner" "section1" "section2" "section3" "footer";
 }
 
 .banner-container {
@@ -58,7 +68,7 @@ body {
             rgba(255, 255, 255, 0.438)
         ),
         url("../images/banner.PNG");
-    height: 440px;
+    height: 465px;
     background-size: cover;
     justify-content: center;
     align-items: flex-start;
@@ -78,9 +88,10 @@ body {
 }
 
 .section1-menu {
-    width: 20%;
+    width: 50%;
     background-color: #f2ae2e;
     color: #730c02;
+    font-size: 20px;
 }
 
 .section1-menu ul {
@@ -112,14 +123,18 @@ body {
     transition: 0.5s;
 }
 
+.active {
+    background-color: #730c02;
+    color: #f2ae2e;
+}
+
 .section1-information {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 80%;
-    padding: 10px;
+    width: 50%;
 }
 
 #section1-information-image {
@@ -127,28 +142,133 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
-#section1-information-image img {
-    width: 80%;
+#section1-embeded-image {
+    width: 100%;
 }
 
 #section1-information-text {
-    padding: 5px;
+    padding: 10px;
+    font-size: 12px;
 }
 
 #section2-container {
     grid-area: section2;
+    display: flex;
+    flex-direction: row;
+}
+
+#direction-text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #730c02;
+    font-size: 50px;
+}
+
+#google-maps-container {
+    width: 50%;
+    background-color: #f2ae2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#google-maps {
+    padding: 10px;
 }
 
 #section3-container {
     grid-area: section3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2ae2e;
+    color: #730c02;
 }
 
-#section4-container {
-    grid-area: section4;
+#feedback-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #F2A03D;
+    border: 15px solid #f2ae2e;
 }
 
-#footer-container {
+#feedback-form-container form {
+    width: 100%;
+}
+
+#feedback-form-container form input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+#feedback-form-container form textarea {
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer-container {
     grid-area: footer;
+    background-color: #730C02;
+    color: #f2ae2e;
+    height: 70px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#social-media-container {
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
+
+#social-media-container a {
+    padding: 10px;
+}
+
+.footer-container a {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container img {
+    height: 70%;
+}
+
+#scroll-back-to-top-button {
+    padding: 10px;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll-back-to-top-button img {
+    height: 80%;
+    padding: 10px;
 }
