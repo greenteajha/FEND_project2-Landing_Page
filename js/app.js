@@ -49,7 +49,7 @@ for (let sectionName of sectionNames){
     let navLinksLI = document.createElement('li');
     let navLinksA = document.createElement('a');
     navLinksA.textContent = sectionName.id;
-    navLinksA.setAttribute('src','#section1-container');
+    navLinksA.setAttribute('href','#'+sectionName.id);
     navLinksLI.appendChild(navLinksA);
     navLinksUL.appendChild(navLinksLI);
 }
@@ -76,7 +76,6 @@ function myFunction() {
   }
 
   /* Scroll button back to the top */
-
 const topButton = document.getElementById('scroll-back-to-top-button');
 
 topButton.addEventListener("click", function(){
