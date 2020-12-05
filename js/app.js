@@ -15,7 +15,7 @@ for (let section1menuitem of section1menuitems){
     });
 }
 
-/* Function to check if component is in viewport
+/* Function to check if component is in viewport */
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -26,12 +26,40 @@ function isInViewport(element) {
     );
 }
 
-const sect1box = document.querySelector('.section1-container');
-const rect = isInViewport(sect1box);
-console.log(rect);
+const sectionBoxes = document.querySelectorAll(".sections");
+
+for (let sectionBox of sectionBoxes){
+    document.addEventListener("scroll", function(){    
+
+        const sectionViewport = isInViewport(sectionBox);
+
+        if (sectionViewport){
+
+            console.log(sectionBox.id+" is in viewport");
+        }
+    
+    });
+}
+
+/*
+document.addEventListener("scroll", function(){
+    const sect1vp = isInViewport(sect1box);
+    const sect2vp = isInViewport(sect2box);
+    const sect3vp = isInViewport(sect3box);
+    if (sect1vp == true){
+        console.log("Section 1 is in viewport");
+    }else if (sect2vp == true){
+        console.log("Section 2 is in viewport");
+    }else if (sect3vp == true){
+        console.log("Section 3 is in viewport");
+    }else{
+        console.log("Everything is spoiling!");
+    }
+    
+});
 */
 
-
+/* Create a document fragment to store dynamic menu */
 const navLinksFragment = document.createDocumentFragment();
 
 /* Create div container for navigation menu */

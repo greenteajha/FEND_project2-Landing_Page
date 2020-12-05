@@ -54,6 +54,10 @@ body {
     font-size: 20px;
 }
 
+#nav-bar-section-links.active {
+    background-color: red;
+}
+
 .body-container {
     display: grid;
     grid-template-columns: 100%;
@@ -124,7 +128,7 @@ body {
     transition: 0.5s;
 }
 
-.active {
+.section1-menu-link.active {
     background-color: #730c02;
     color: #f2ae2e;
 }
