@@ -29,6 +29,8 @@ function isInViewport(element) {
 const sectionBoxes = document.querySelectorAll(".sections");
 
 for (let sectionBox of sectionBoxes){
+
+
     document.addEventListener("scroll", function(){    
 
         const sectionViewport = isInViewport(sectionBox);
@@ -36,6 +38,8 @@ for (let sectionBox of sectionBoxes){
         if (sectionViewport){
 
             console.log(sectionBox.id+" is in viewport");
+            const activeLink = document.querySelector('#'+sectionBox.id+"A");
+            activeLink.setAttribute('style','background-color: red');
         }
     
     });
@@ -78,6 +82,7 @@ for (let sectionName of sectionNames){
     let navLinksA = document.createElement('a');
     navLinksA.textContent = sectionName.id;
     navLinksA.setAttribute('href','#'+sectionName.id);
+    navLinksA.setAttribute('id',sectionName.id+"A");
     navLinksLI.appendChild(navLinksA);
     navLinksUL.appendChild(navLinksLI);
 }
