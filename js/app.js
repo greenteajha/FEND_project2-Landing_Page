@@ -30,16 +30,21 @@ const sectionBoxes = document.querySelectorAll(".sections");
 
 for (let sectionBox of sectionBoxes){
 
-
     document.addEventListener("scroll", function(){    
 
         const sectionViewport = isInViewport(sectionBox);
+        const activeLink = document.querySelector('#'+sectionBox.id+"A");
 
         if (sectionViewport){
 
             console.log(sectionBox.id+" is in viewport");
-            const activeLink = document.querySelector('#'+sectionBox.id+"A");
-            activeLink.setAttribute('style','background-color: red');
+            activeLink.classList.add('active');
+            //activeLink.setAttribute('style','background-color: red');
+        
+        }else{
+            if (activeLink.classList.contains('active')){
+                activeLink.classList.remove('active');
+            }
         }
     
     });
