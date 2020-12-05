@@ -732,16 +732,16 @@ body {
 
     #section1-information-text {
         padding: 10px;
-        font-size: 6px;
+        font-size: 7px;
     }
 
     #direction-text-container {
-        font-size: 35px;
+        font-size: 24px;
     }
     #feedback-form-container {
         padding: 10px;
         border: 15px solid #f2ae2e;
-        width: 50%;
+        width: 80%;
     }
 
     #feedback-form-container form input {
