@@ -173,18 +173,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 65%;
     width: 100%;
 }
 
 #section1-embeded-image {
-    height: 80%;
-    width: 80%;
+    max-height: 95%;
+    max-width: 95%;
 }
 
 #section1-information-text {
-    height: 50%;
+    height: 35%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -333,8 +335,7 @@ body {
     }
 
     #section1-information-text {
-        padding: 10px;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     #direction-text-container {
@@ -418,8 +419,7 @@ body {
     }
 
     #section1-information-text {
-        padding: 10px;
-        font-size: 13px;
+        font-size: 18px;
     }
 
     #direction-text-container {
@@ -464,6 +464,7 @@ body {
     }
 }
 
+/* M Device */
 @media (min-width: 768px) and (max-width: 991px) {
     .nav-bar-container {
         height: 60px;
@@ -501,8 +502,7 @@ body {
     }
 
     #section1-information-text {
-        padding: 10px;
-        font-size: 11px;
+        font-size: 16px;
     }
 
     #direction-text-container {
@@ -547,6 +547,7 @@ body {
     }
 }
 
+/* S Device */
 @media (min-width: 600px) and (max-width: 767px) {
     .nav-bar-container {
         height: 55px;
@@ -584,8 +585,7 @@ body {
     }
 
     #section1-information-text {
-        padding: 10px;
-        font-size: 9px;
+        font-size: 14px;
     }
 
     #direction-text-container {
@@ -630,6 +630,7 @@ body {
     }
 }
 
+/* XS Device */
 @media (max-width: 600px) {
     .nav-bar-container {
         height: 50px;
@@ -667,8 +668,7 @@ body {
     }
 
     #section1-information-text {
-        padding: 10px;
-        font-size: 7px;
+        font-size: 10px;
     }
 
     #direction-text-container {

@@ -18,7 +18,7 @@ activeSectionOneOptionOne.addEventListener("mouseover",function(){
 activeSectionOneOptionTwo.addEventListener("mouseover",function(){
     activeSectionOneOptionTwo.setAttribute('class','section1-menu-link-option-two active');
     sectionOneImage.setAttribute('src','images/section1-image-types-of-ingredients.png');
-    sectionOneText.textContent = "Fresh Ingredients. Locally Sourced. Organic";
+    sectionOneText.textContent = "Fresh Ingredients. Locally Sourced. Organic.";
     if (activeSectionOneOptionOne.classList.contains('active')){
         activeSectionOneOptionOne.setAttribute('class','section1-menu-link-option-one');
     }
