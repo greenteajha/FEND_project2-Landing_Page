@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     margin: 0;
@@ -173,7 +177,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 70%;
 }
 
 #section1-embeded-image {
@@ -182,7 +186,7 @@ body {
 
 #section1-information-text {
     padding: 10px;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 #section2-container {
@@ -251,6 +255,10 @@ body {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+#feedback-form-container form input::placeholder{
+    font-size: 20px;
+}
+
 #feedback-form-container form textarea {
     width: 100%;
     box-sizing: border-box;
@@ -259,6 +267,14 @@ body {
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+#feedback-form-container form textarea::placeholder{
+    font-size: 20px;
+}
+
+#feedback-form-container form input[type=submit]{
+    font-size: 20px;
 }
 
 .footer-container {
