@@ -1,21 +1,15 @@
 /* ------------------------------------------ */
 /* SECTION 1'S CONTENT CHANGE FUNCTION */
-let section1menuitems = document.querySelectorAll(".section1-menu a");
-let section1imagetag = document.querySelector('#section1-embeded-image');
+const activeSectionOneOptionOne = document.querySelector('.section1-menu-link-option-one');
+console.log(activeSectionOneOptionOne);
+activeSectionOneOptionOne.addEventListener("mouseover",function(){
+    console.log("OPTION 1");
+});
 
-for (let section1menuitem of section1menuitems){
-    section1menuitem.addEventListener("mouseover", function(){
-        section1menuitem.style.backgroundColor = "#730c02";
-        section1menuitem.style.color = "#f2ae2e";
-        section1imagetag.setAttribute('src','images/section1-image-types-of-ingredients.png');
-    });
-
-    section1menuitem.addEventListener("mouseout", function(){
-        section1menuitem.style.backgroundColor = "#f2ae2e";
-        section1menuitem.style.color = "#730c02";
-    });
-}
-
+const activeSectionOneOptionTwo = document.querySelector('.section1-menu-link-option-two');
+activeSectionOneOptionTwo.addEventListener("mouseover",function(){
+    console.log("OPTION 2");
+});
 
 /* -------------------------------------------------------------- */
 /* "IF SECTION IS ACTIVE, HIGHLIGHT NAVIGATION BAR LINK" FUNCTION */

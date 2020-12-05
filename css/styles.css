@@ -114,6 +114,11 @@ body {
     font-size: 20px;
 }
 
+.section1-menu-link.active {
+    background-color: #730c02;
+    color: #f2ae2e;
+}
+
 .section1-menu ul {
     height: 100%;
     width: 100%;
@@ -141,11 +146,6 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-}
-
-.section1-menu-link.active {
-    background-color: #730c02;
-    color: #f2ae2e;
 }
 
 .section1-information {
