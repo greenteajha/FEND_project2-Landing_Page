@@ -98,7 +98,7 @@ const navLinksUL = document.createElement('ul');
 for (let sectionName of sectionNames){
     let navLinksLI = document.createElement('li');
     let navLinksA = document.createElement('a');
-    navLinksA.textContent = sectionName.id;
+    navLinksA.textContent = sectionName.getAttribute('value');
     navLinksA.setAttribute('href','#'+sectionName.id);
     navLinksA.setAttribute('id',sectionName.id+"A");
     navLinksLI.appendChild(navLinksA);
