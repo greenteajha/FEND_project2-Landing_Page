@@ -170,23 +170,27 @@ body {
     align-items: center;
     text-align: center;
     width: 50%;
+    height: 100%;
 }
 
 #section1-information-image {
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    height: 50%;
+    width: 100%;
 }
 
 #section1-embeded-image {
-    width: 100%;
+    height: 80%;
 }
 
 #section1-information-text {
     padding: 10px;
     font-size: 15px;
+    height: 50%;
+    display: flex;
+    align-items: center;
 }
 
 #section2-container {
