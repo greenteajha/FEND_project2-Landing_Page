@@ -3,10 +3,10 @@
 <ol>
     <li><a href="#about">About the Project</a></li>
     <ul>
-        <li><a href="#">Built With</a></li>
+        <li><a href="#builtWith">Built With</a></li>
     </ul>
-    <li><a href="#">Project Description</a></li>
-    <li><a href="#">Project Author</a></li>
+    <li><a href="#description">Project Description</a></li>
+    <li><a href="#author">Project Author</a></li>
 </ol>
 
 <h2 class="about">About the Project</h2>
@@ -19,10 +19,10 @@
     <li>JavaScript</li>
 </ul>
 
-<h2>Project Description</h2>
+<h2 class="description">Project Description</h2>
 <p>This project helps build hands-on skills in areas that are specific to JavaScript and how CSS and HTML intertwines together</p>
 
-<h2>Project Author</h2>
+<h2 class="author">Project Author</h2>
 <p>Jeremy Teo</p>
 <p>Practioner of Cyber Security at Day Time,<br>
 Earnest learner of web development at night.</p>
