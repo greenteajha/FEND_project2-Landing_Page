@@ -62,12 +62,12 @@ for (let sectionBox of sectionBoxes){
         }else{
 
             /* If sections is not in viewport... */
-            const sectionOneContainer = document.querySelector('#section1-container');
-            const sectionOneRect = sectionOneContainer.getBoundingClientRect();
+            const bannerContainer = document.querySelector('.banner-container');
+            const bannerRect = bannerContainer.getBoundingClientRect();
 
-            /* If section 1 top border disappear below the screen height... */
-            if (sectionOneRect.top > (window.innerHeight || document.documentElement.clientHeight)){
-                
+            /* If banner top border is within screen, remove active states from navigation links */
+            if (bannerRect.top >= 0){
+
                 for (let navBox of navBoxes){
                     if(navBox.classList.contains('active')){
                         navBox.classList.remove('active');

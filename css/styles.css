@@ -91,7 +91,7 @@ body {
             rgba(255, 255, 255, 0.438)
         ),
         url("../images/banner.PNG");
-    height: 900px;
+    height: 450px;
     background-size: cover;
     justify-content: center;
     align-items: flex-start;
