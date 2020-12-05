@@ -14,7 +14,6 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #730c02;
-    height: 70px;
 }
 
 .sticky {
@@ -23,20 +22,25 @@ body {
     width: 100%;
 }
 
-.sticky + .body-container {
-    padding-top: 70px;
-}
-
 #logo {
-    width: 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 100%;
+}
+
+#logo a {
+    display: flex;
+    justify-content: center;
+}
+
+#logo img {
+    height: 90%;
+    width: 90%;
 }
 
 #nav-bar-section-links {
-    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -62,13 +66,11 @@ body {
     text-decoration: none;
     height: 100%;
     color: #f2ae2e;
-    font-size: 20px;
     transition: background-color, color 0.5s;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-right: 10px;
-    padding-left: 10px;
+    text-align: center;
 }
 
 #nav-bar-section-links .active {
@@ -79,7 +81,6 @@ body {
 .body-container {
     display: grid;
     grid-template-columns: 100%;
-    grid-auto-rows: minmax(200px, auto);
     grid-template-areas: "banner" "section1" "section2" "section3";
 }
 
@@ -91,15 +92,12 @@ body {
             rgba(255, 255, 255, 0.438)
         ),
         url("../images/banner.PNG");
-    height: 450px;
     background-size: cover;
     justify-content: center;
     align-items: flex-start;
 }
 
 #banner-text {
-    font-size: 50px;
-    padding-top: 100px;
     color: #8c3503;
 }
 
@@ -108,14 +106,12 @@ body {
     grid-area: section1;
     display: flex;
     flex-direction: row;
-    height: 600px;
 }
 
 .section1-menu {
     width: 50%;
     background-color: #f2ae2e;
     color: #730c02;
-    font-size: 20px;
 }
 
 .section1-menu ul {
@@ -183,11 +179,10 @@ body {
 
 #section1-embeded-image {
     height: 80%;
+    width: 80%;
 }
 
 #section1-information-text {
-    padding: 10px;
-    font-size: 15px;
     height: 50%;
     display: flex;
     align-items: center;
@@ -197,7 +192,6 @@ body {
     grid-area: section2;
     display: flex;
     flex-direction: row;
-    height: 600px;
 }
 
 #direction-text-container {
@@ -207,11 +201,11 @@ body {
     justify-content: center;
     align-items: center;
     color: #730c02;
-    font-size: 50px;
 }
 
 #google-maps-container {
     width: 50%;
+    height: 100%;
     background-color: #f2ae2e;
     display: flex;
     justify-content: center;
@@ -219,7 +213,9 @@ body {
 }
 
 #google-maps {
-    padding: 10px;
+    width: 95%;
+    height: 95%;
+    border: 0;
 }
 
 #section3-container {
@@ -230,7 +226,6 @@ body {
     align-items: center;
     background-color: #f2ae2e;
     color: #730c02;
-    height: 600px;
 }
 
 #feedback-form-container {
@@ -239,7 +234,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
     background-color: #f2a03d;
     border: 15px solid #f2ae2e;
     width: 50%;
@@ -251,40 +245,19 @@ body {
 
 #feedback-form-container form input {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     box-sizing: border-box;
     font-family: "Source Sans Pro", sans-serif;
-}
-
-#feedback-form-container form input::placeholder{
-    font-size: 20px;
 }
 
 #feedback-form-container form textarea {
     width: 100%;
     box-sizing: border-box;
     font-family: "Source Sans Pro", sans-serif;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#feedback-form-container form textarea::placeholder{
-    font-size: 20px;
-}
-
-#feedback-form-container form input[type=submit]{
-    font-size: 20px;
 }
 
 .footer-container {
     background-color: #730c02;
     color: #f2ae2e;
-    height: 70px;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
@@ -297,11 +270,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-}
-
-#social-media-container a {
-    padding: 10px;
 }
 
 .footer-container a {
@@ -316,7 +284,6 @@ body {
 }
 
 #scroll-back-to-top-button {
-    padding: 10px;
     height: 70%;
     display: flex;
     justify-content: center;
@@ -325,5 +292,503 @@ body {
 
 #scroll-back-to-top-button img {
     height: 80%;
-    padding: 10px;
+}
+
+/* XL Device */
+@media (min-width: 1200px) {
+    .nav-bar-container {
+        height: 70px;
+    }
+
+    .sticky + .body-container {
+        padding-top: 70px;
+    }
+
+    #logo {
+        width: 10%;
+    }
+
+    #nav-bar-section-links {
+        width: 90%;
+    }
+
+    #nav-bar-section-links a {
+        font-size: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .body-container {
+        grid-auto-rows: minmax(450px, auto);
+    }
+
+    #banner-text {
+        font-size: 50px;
+        padding-top: 100px;
+    }
+
+    /* Section 1 Container */
+
+    .section1-menu {
+        font-size: 20px;
+    }
+
+    #section1-information-text {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    #direction-text-container {
+        font-size: 50px;
+    }
+
+    #feedback-form-container {
+        padding: 10px;
+        border: 15px solid #f2ae2e;
+        width: 50%;
+    }
+
+    #feedback-form-container form input {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    #feedback-form-container form input::placeholder {
+        font-size: 20px;
+    }
+
+    #feedback-form-container form textarea {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    #feedback-form-container form textarea::placeholder {
+        font-size: 20px;
+    }
+
+    #feedback-form-container form input[type="submit"] {
+        font-size: 20px;
+    }
+
+    .footer-container {
+        height: 70px;
+    }
+
+    #social-media-container {
+        padding: 10px;
+    }
+
+    #social-media-container a {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button img {
+        padding: 10px;
+    }
+}
+
+/* L Device */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .nav-bar-container {
+        height: 65px;
+    }
+
+    .sticky + .body-container {
+        padding-top: 65px;
+    }
+
+    #logo {
+        width: 10%;
+    }
+
+    #nav-bar-section-links {
+        width: 90%;
+    }
+
+    #nav-bar-section-links a {
+        font-size: 18px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .body-container {
+        grid-auto-rows: minmax(420px, auto);
+    }
+
+    #banner-text {
+        font-size: 40px;
+        padding-top: 100px;
+    }
+
+    /* Section 1 Container */
+    .section1-menu {
+        font-size: 20px;
+    }
+
+    #section1-information-text {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #direction-text-container {
+        font-size: 50px;
+    }
+    #feedback-form-container {
+        padding: 10px;
+        border: 15px solid #f2ae2e;
+        width: 50%;
+    }
+
+    #feedback-form-container form input {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    #feedback-form-container form input::placeholder {
+        font-size: 18px;
+    }
+
+    #feedback-form-container form textarea {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    #feedback-form-container form textarea::placeholder {
+        font-size: 18px;
+    }
+
+    #feedback-form-container form input[type="submit"] {
+        font-size: 18px;
+    }
+
+    .footer-container {
+        height: 65px;
+    }
+
+    #social-media-container {
+        padding: 10px;
+    }
+
+    #social-media-container a {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button img {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .nav-bar-container {
+        height: 60px;
+    }
+
+    .sticky + .body-container {
+        padding-top: 60px;
+    }
+
+    #logo {
+        width: 10%;
+    }
+
+    #nav-bar-section-links {
+        width: 90%;
+    }
+
+    #nav-bar-section-links a {
+        font-size: 16px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .body-container {
+        grid-auto-rows: minmax(380px, auto);
+    }
+
+    #banner-text {
+        font-size: 35px;
+        padding-top: 100px;
+    }
+
+    /* Section 1 Container */
+    .section1-menu {
+        font-size: 20px;
+    }
+
+    #section1-information-text {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    #direction-text-container {
+        font-size: 40px;
+    }
+    #feedback-form-container {
+        padding: 10px;
+        border: 15px solid #f2ae2e;
+        width: 50%;
+    }
+
+    #feedback-form-container form input {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #feedback-form-container form input::placeholder {
+        font-size: 15px;
+    }
+
+    #feedback-form-container form textarea {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #feedback-form-container form textarea::placeholder {
+        font-size: 15px;
+    }
+
+    #feedback-form-container form input[type="submit"] {
+        font-size: 15px;
+    }
+
+    .footer-container {
+        height: 60px;
+    }
+
+    #social-media-container {
+        padding: 10px;
+    }
+
+    #social-media-container a {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button img {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .nav-bar-container {
+        height: 55px;
+    }
+
+    .sticky + .body-container {
+        padding-top: 55px;
+    }
+
+    #logo {
+        width: 10%;
+    }
+
+    #nav-bar-section-links {
+        width: 90%;
+    }
+
+    #nav-bar-section-links a {
+        font-size: 15px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .body-container {
+        grid-auto-rows: minmax(320px, auto);
+    }
+
+    #banner-text {
+        font-size: 30px;
+        padding-top: 100px;
+    }
+
+    /* Section 1 Container */
+    .section1-menu {
+        font-size: 18px;
+    }
+
+    #section1-information-text {
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    #direction-text-container {
+        font-size: 35px;
+    }
+    #feedback-form-container {
+        padding: 10px;
+        border: 15px solid #f2ae2e;
+        width: 50%;
+    }
+
+    #feedback-form-container form input {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    #feedback-form-container form input::placeholder {
+        font-size: 12px;
+    }
+
+    #feedback-form-container form textarea {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    #feedback-form-container form textarea::placeholder {
+        font-size: 12px;
+    }
+
+    #feedback-form-container form input[type="submit"] {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        height: 55px;
+    }
+
+    #social-media-container {
+        padding: 10px;
+    }
+
+    #social-media-container a {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button img {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-bar-container {
+        height: 50px;
+    }
+
+    .sticky + .body-container {
+        padding-top: 50px;
+    }
+
+    #logo {
+        width: 20%;
+    }
+
+    #nav-bar-section-links {
+        width: 80%;
+    }
+
+    #nav-bar-section-links a {
+        font-size: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .body-container {
+        grid-auto-rows: minmax(280px, auto);
+    }
+
+    #banner-text {
+        font-size: 22px;
+        padding-top: 100px;
+    }
+
+    /* Section 1 Container */
+    .section1-menu {
+        font-size: 10px;
+    }
+
+    #section1-information-text {
+        padding: 10px;
+        font-size: 6px;
+    }
+
+    #direction-text-container {
+        font-size: 35px;
+    }
+    #feedback-form-container {
+        padding: 10px;
+        border: 15px solid #f2ae2e;
+        width: 50%;
+    }
+
+    #feedback-form-container form input {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    #feedback-form-container form input::placeholder {
+        font-size: 12px;
+    }
+
+    #feedback-form-container form textarea {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    #feedback-form-container form textarea::placeholder {
+        font-size: 12px;
+    }
+
+    #feedback-form-container form input[type="submit"] {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        height: 55px;
+    }
+
+    #social-media-container {
+        padding: 10px;
+    }
+
+    #social-media-container a {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button {
+        padding: 10px;
+    }
+
+    #scroll-back-to-top-button img {
+        padding: 10px;
+    }
 }
