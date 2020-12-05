@@ -378,22 +378,6 @@ body {
     .footer-container {
         height: 70px;
     }
-
-    #social-media-container {
-        padding: 10px;
-    }
-
-    #social-media-container a {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button img {
-        padding: 10px;
-    }
 }
 
 /* L Device */
@@ -478,22 +462,6 @@ body {
     .footer-container {
         height: 65px;
     }
-
-    #social-media-container {
-        padding: 10px;
-    }
-
-    #social-media-container a {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button img {
-        padding: 10px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -576,22 +544,6 @@ body {
 
     .footer-container {
         height: 60px;
-    }
-
-    #social-media-container {
-        padding: 10px;
-    }
-
-    #social-media-container a {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button img {
-        padding: 10px;
     }
 }
 
@@ -676,22 +628,6 @@ body {
     .footer-container {
         height: 55px;
     }
-
-    #social-media-container {
-        padding: 10px;
-    }
-
-    #social-media-container a {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button img {
-        padding: 10px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -774,21 +710,6 @@ body {
 
     .footer-container {
         height: 55px;
-    }
-
-    #social-media-container {
-        padding: 10px;
-    }
-
-    #social-media-container a {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button {
-        padding: 10px;
-    }
-
-    #scroll-back-to-top-button img {
-        padding: 10px;
+        font-size: 8px;
     }
 }
