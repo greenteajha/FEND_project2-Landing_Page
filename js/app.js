@@ -1,4 +1,5 @@
-/* Hover effect over section 1's menu buttons */
+/* ------------------------------------------ */
+/* SECTION 1'S CONTENT CHANGE FUNCTION */
 let section1menuitems = document.querySelectorAll(".section1-menu a");
 let section1imagetag = document.querySelector('#section1-embeded-image');
 
@@ -15,59 +16,65 @@ for (let section1menuitem of section1menuitems){
     });
 }
 
-/* Function to check if component is in viewport */
+
+/* -------------------------------------------------------------- */
+/* "IF SECTION IS ACTIVE, HIGHLIGHT NAVIGATION BAR LINK" FUNCTION */
+/* Function to check if DOM element is in frame */
 function isInViewport(element) {
+
     const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
 }
 
+/* Function to check if sections are in viewport */
 const sectionBoxes = document.querySelectorAll(".sections");
+let isActive = false;
 
 for (let sectionBox of sectionBoxes){
 
+    /* On scroll function */
     document.addEventListener("scroll", function(){    
 
         const sectionViewport = isInViewport(sectionBox);
         const activeLink = document.querySelector('#'+sectionBox.id+"A");
+        const navBoxes = document.querySelectorAll('#nav-bar-section-links a');
 
-        if (sectionViewport){
-
-            console.log(sectionBox.id+" is in viewport");
-            activeLink.classList.add('active');
-            //activeLink.setAttribute('style','background-color: red');
-        
-        }else{
-            if (activeLink.classList.contains('active')){
-                activeLink.classList.remove('active');
+        /* If sections is in viewport... */
+        if (sectionViewport){            
+            for (let navBox of navBoxes){
+                if(navBox.classList.contains('active')){
+                    navBox.classList.remove('active');
+                }
             }
+
+            activeLink.classList.add('active');
+          
+        }else{
+
+            /* If sections is not in viewport... */
+            const bannerContainer = document.querySelector('.banner-container');
+            const bannerRect = bannerContainer.getBoundingClientRect();
+
+            /* If banner is IN viewport but not sections... */
+            if (bannerRect.top >= 0 && bannerRect.bottom <= (window.innerHeight || document.documentElement.clientHeight)){
+                
+                for (let navBox of navBoxes){
+                    if(navBox.classList.contains('active')){
+                        navBox.classList.remove('active');
+                    }
+                }
+            }
+
         }
-    
     });
 }
 
-/*
-document.addEventListener("scroll", function(){
-    const sect1vp = isInViewport(sect1box);
-    const sect2vp = isInViewport(sect2box);
-    const sect3vp = isInViewport(sect3box);
-    if (sect1vp == true){
-        console.log("Section 1 is in viewport");
-    }else if (sect2vp == true){
-        console.log("Section 2 is in viewport");
-    }else if (sect3vp == true){
-        console.log("Section 3 is in viewport");
-    }else{
-        console.log("Everything is spoiling!");
-    }
-    
-});
-*/
 
+/* ----------------------------------------- */
+/* FUNCTION TO CREATE DYNAMIC NAVIGATION BAR */
 /* Create a document fragment to store dynamic menu */
 const navLinksFragment = document.createDocumentFragment();
 
@@ -92,14 +99,16 @@ for (let sectionName of sectionNames){
     navLinksUL.appendChild(navLinksLI);
 }
 
+/* Add dynamic links to the unordered list */
 navLinks.appendChild(navLinksUL);
 navLinksFragment.appendChild(navLinks);
 
+/* Add unordered list to navigation bar container */
 const abc = document.querySelector('.nav-bar-container');
 abc.appendChild(navLinksFragment);
 
 
-/* Sticky Navigation Bar */
+/* STICKY NAVIGATION BAR FUNCTION */
 document.onscroll = function() {myFunction()};
 
 let navbar = document.getElementById("navbar");
@@ -113,9 +122,11 @@ function myFunction() {
     }
   }
 
-  /* Scroll button back to the top */
+/* Scroll button back to the top */
 const topButton = document.getElementById('scroll-back-to-top-button');
 
+/* ----------------------------------------------------- */
+/* BUTTON FUNCTION TO SCROLL BACK TO THE TOP OF THE PAGE */
 topButton.addEventListener("click", function(){
     topFunction();
 });
