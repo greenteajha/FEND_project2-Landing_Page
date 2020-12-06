@@ -9,18 +9,20 @@ const sectionOneText = document.querySelector('#section1-information-text');
 activeSectionOneOptionOne.addEventListener("mouseover",function(){
     sectionOneImage.setAttribute('src','images/section1-image-what-do-we-sell.PNG');
     sectionOneText.textContent = "Bubble Tea. Chinese Deserts.";
-    activeSectionOneOptionOne.setAttribute('class','section1-menu-link-option-one active');
+    activeSectionOneOptionOne.classList.toggle('active');
+    //activeSectionOneOptionOne.setAttribute('class','section1-menu-link-option-one active');
     if (activeSectionOneOptionTwo.classList.contains('active')){
-        activeSectionOneOptionTwo.setAttribute('class','section1-menu-link-option-two');
+        activeSectionOneOptionTwo.classList.toggle('active');
     }
 });
 
 activeSectionOneOptionTwo.addEventListener("mouseover",function(){
     sectionOneImage.setAttribute('src','images/section1-image-types-of-ingredients.png');
     sectionOneText.textContent = "Fresh Ingredients. Locally Sourced. Organic.";
-    activeSectionOneOptionTwo.setAttribute('class','section1-menu-link-option-two active');
+    activeSectionOneOptionTwo.classList.toggle('active');
+    //activeSectionOneOptionTwo.setAttribute('class','section1-menu-link-option-two active');
     if (activeSectionOneOptionOne.classList.contains('active')){
-        activeSectionOneOptionOne.setAttribute('class','section1-menu-link-option-one');
+        activeSectionOneOptionOne.classList.toggle('active');
     }
 });
 
@@ -29,11 +31,19 @@ activeSectionOneOptionTwo.addEventListener("mouseover",function(){
 /* Function to check if DOM element is in frame */
 function isInViewport(element) {
 
-    const rect = element.getBoundingClientRect();
+    const elementBoundry = element.getBoundingClientRect();
     return (
-        rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        elementBoundry.top >= 0 &&
+        elementBoundry.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
+}
+
+function isNavActive(elements) {
+    for (let element of elements){
+        if(element.classList.contains('active')){
+            element.classList.remove('active');
+        }
+    }
 }
 
 /* Function to check if sections are in viewport */
@@ -51,14 +61,8 @@ for (let sectionBox of sectionBoxes){
 
         /* If sections is in viewport... */
         if (sectionViewport){            
-            for (let navBox of navBoxes){
-                if(navBox.classList.contains('active')){
-                    navBox.classList.remove('active');
-                }
-            }
-
-            activeLink.classList.add('active');
-          
+            isNavActive(navBoxes);
+            activeLink.classList.add('active');          
         }else{
 
             /* If sections is not in viewport... */
@@ -67,12 +71,7 @@ for (let sectionBox of sectionBoxes){
 
             /* If banner top border is within screen, remove active states from navigation links */
             if (bannerRect.top >= 0){
-
-                for (let navBox of navBoxes){
-                    if(navBox.classList.contains('active')){
-                        navBox.classList.remove('active');
-                    }
-                }
+                isNavActive(navBoxes);
             }
         }
     });

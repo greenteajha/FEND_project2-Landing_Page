@@ -1,3 +1,4 @@
+/* OVERALL BODY STYLE */
 html {
     scroll-behavior: smooth;
     width: 100%;
@@ -14,6 +15,7 @@ body {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+/* NAVIGATION BAR STYLE */
 .nav-bar-container {
     display: flex;
     flex-direction: row;
@@ -84,6 +86,7 @@ body {
     color: #730c02;
 }
 
+/* GRID STRUCTURE FOR VARIOUS SECTIONS STYLE */
 .body-container {
     display: grid;
     grid-template-columns: 100%;
@@ -107,7 +110,7 @@ body {
     color: #8c3503;
 }
 
-/* Section 1 Container */
+/* Section 1 Container Style */
 #section1-container {
     grid-area: section1;
     display: flex;
@@ -198,6 +201,7 @@ body {
     align-items: center;
 }
 
+/* Section 2 Container Style */
 #section2-container {
     grid-area: section2;
     display: flex;
@@ -228,6 +232,7 @@ body {
     border: 0;
 }
 
+/* Section 3 Container Style */
 #section3-container {
     grid-area: section3;
     display: flex;
@@ -269,6 +274,7 @@ body {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+/* Footer Container Style */
 .footer-container {
     background-color: #730c02;
     color: #f2ae2e;
@@ -308,6 +314,8 @@ body {
     height: 80%;
 }
 
+
+/* MEDIA QUERY STYLES FOR VARIOUS DEVICE SIZE */
 /* XL Device */
 @media (min-width: 1200px) {
     .nav-bar-container {
