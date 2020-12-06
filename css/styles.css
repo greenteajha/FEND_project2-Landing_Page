@@ -112,6 +112,8 @@ body {
     grid-area: section1;
     display: flex;
     flex-direction: row;
+    height: 100%;
+    width: 100%;
 }
 
 .section1-menu {
@@ -234,6 +236,8 @@ body {
     align-items: center;
     background-color: #f2ae2e;
     color: #730c02;
+    height: 100%;
+    width: 100%;
 }
 
 #feedback-form-container {
@@ -245,9 +249,11 @@ body {
     background-color: #f2a03d;
     border: 15px solid #f2ae2e;
     width: 50%;
+    height: 100%;
 }
 
 #feedback-form-container form {
+    height: 100%;
     width: 100%;
 }
 
@@ -326,7 +332,7 @@ body {
         padding-left: 10px;
     }
     .body-container {
-        grid-auto-rows: minmax(450px, auto);
+        grid-auto-rows: minmax(80px, 500px);
     }
 
     #banner-text {
@@ -411,7 +417,7 @@ body {
         padding-left: 10px;
     }
     .body-container {
-        grid-auto-rows: minmax(420px, auto);
+        grid-auto-rows: minmax(80px, 470px);
     }
 
     #banner-text {
@@ -494,7 +500,7 @@ body {
         padding-left: 10px;
     }
     .body-container {
-        grid-auto-rows: minmax(380px, auto);
+        grid-auto-rows: minmax(80px, 450px);
     }
 
     #banner-text {
@@ -577,7 +583,7 @@ body {
         padding-left: 10px;
     }
     .body-container {
-        grid-auto-rows: minmax(320px, auto);
+        grid-auto-rows: minmax(80px, 430px);
     }
 
     #banner-text {
@@ -660,7 +666,7 @@ body {
         padding-left: 10px;
     }
     .body-container {
-        grid-auto-rows: minmax(280px, auto);
+        grid-auto-rows: minmax(80px, 410px);
     }
 
     #banner-text {

@@ -7,18 +7,18 @@ const sectionOneText = document.querySelector('#section1-information-text');
 
 
 activeSectionOneOptionOne.addEventListener("mouseover",function(){
-    activeSectionOneOptionOne.setAttribute('class','section1-menu-link-option-one active');
     sectionOneImage.setAttribute('src','images/section1-image-what-do-we-sell.PNG');
     sectionOneText.textContent = "Bubble Tea. Chinese Deserts.";
+    activeSectionOneOptionOne.setAttribute('class','section1-menu-link-option-one active');
     if (activeSectionOneOptionTwo.classList.contains('active')){
         activeSectionOneOptionTwo.setAttribute('class','section1-menu-link-option-two');
     }
 });
 
 activeSectionOneOptionTwo.addEventListener("mouseover",function(){
-    activeSectionOneOptionTwo.setAttribute('class','section1-menu-link-option-two active');
     sectionOneImage.setAttribute('src','images/section1-image-types-of-ingredients.png');
     sectionOneText.textContent = "Fresh Ingredients. Locally Sourced. Organic.";
+    activeSectionOneOptionTwo.setAttribute('class','section1-menu-link-option-two active');
     if (activeSectionOneOptionOne.classList.contains('active')){
         activeSectionOneOptionOne.setAttribute('class','section1-menu-link-option-one');
     }
