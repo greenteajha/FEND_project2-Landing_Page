@@ -56,8 +56,8 @@ for (let sectionBox of sectionBoxes){
     document.addEventListener("scroll", function(){    
 
         const sectionViewport = isInViewport(sectionBox);
-        const activeLink = document.querySelector('#'+sectionBox.id+"A");
-        const navBoxes = document.querySelectorAll('#nav-bar-section-links a');
+        const activeLink = document.getElementById(sectionBox.id+'A');
+        const navBoxes = document.querySelectorAll('.navButtons');
 
         /* If sections is in viewport... */
         if (sectionViewport){            
@@ -98,8 +98,10 @@ for (let sectionName of sectionNames){
     let navLinksLI = document.createElement('li');
     let navLinksA = document.createElement('a');
     navLinksA.textContent = sectionName.getAttribute('value');
-    navLinksA.setAttribute('href','#'+sectionName.id);
-    navLinksA.setAttribute('id',sectionName.id+"A");
+    //navLinksA.setAttribute('href','#'+sectionName.id);
+    navLinksA.classList.add("navButtons");
+    navLinksA.setAttribute('id',sectionName.id+'A');
+    navLinksA.setAttribute('value',sectionName.id);
     navLinksLI.appendChild(navLinksA);
     navLinksUL.appendChild(navLinksLI);
 }
@@ -140,4 +142,17 @@ function topFunction() {
     document.documentElement.scrollTo({
         top: 0, behavior: "smooth"
     })
+}
+
+/* -------------------------------- */
+/* SCROLL TO CLICKED NAVIGATION BAR */
+const navButtons = document.getElementsByClassName('navButtons');
+
+for (let navButton of navButtons){
+    const navValue = navButton.getAttribute('value');
+    const sectionID = document.getElementById(navValue);
+
+    navButton.addEventListener("click", function(){
+        sectionID.scrollIntoView();
+    });
 }
